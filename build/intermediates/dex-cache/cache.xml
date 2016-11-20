@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_5036255073fb065b1d8939e5ab1a4637bbe16459.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\okio-1.8.0_ca5d11df7f3ec6251bd5d3a3798b071916fdd27a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9c9e438f82b190a621bffdffe75c9f298e519dbf">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_955235251b360f9808f2686c7261b123ce1e0eee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_fa98e266851cebbe1ba56987556108ca81f013ad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_8f306af375a863a50f9c1cc8227fa67ff75c1539.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.0.0_206511e01137c4c3ac3da3ed188514efdb5d5480.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_81e7962d575a6ccc8479a20f0991d74d1600967d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_2ed3ff9bb7a045f646bcd2a466ece252590904a9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_79f5a353ad9ea12d96ba0ee9e3d39369911375d1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4b53fc600d4c7ad56d7e840e25aaa6abeeb2db45">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\instant-run_c17886e46c894376c9c2f2967e964da8496777d5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.0.0_0109ae43850aa9337e54512e7e3ff90044791b3c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_19fd1d78046c8e9aad724834bcaca50575286e6d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.1\19047bdb6a4fc00a44124f64ca98e88fc204e7e3\okhttp-3.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="19047bdb6a4fc00a44124f64ca98e88fc204e7e3">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\okhttp-3.3.1_8736446cb14f3f21ea52d271bdc64e1b68092514.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.1_bbd0cd4525dec1bcfcdc0c88059380b787a46755.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_66f6164564e5a6b411361aefed8fef3108f75814.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_963e56491fe5343a2970df0b7622272f445ca163.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_0035fb7fb8fe6f692ab20bb7fbe1e49759783523.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.4.0_d61c45410646ae1e8ff0e3e771ceee441c1f8a9f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_e7320ed0aa0b417967549481361bb313c1f71665.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.4.0_d91cf8481858f809473aa425ea17e0f86cfae8cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5025063c4c03baa1b6759432195024dd8e5a3f92">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.android.support-gridlayout-v7-25.0.0_da1d2559467590586262919d4cdcee191495a5a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\support-annotations-25.0.0_804e1eef7ed23a736de3b2433fb9cf4fcef92195.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_666cf6a679bfd58f2dfe0aecf153f8285a413ef0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_1213e1f0c6029b4e45934b7f1638bf76aeed62d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\akhonin\AndroidStudioProjects\Bazilio\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_62204e2f21507e9df11b258072fa919607a08898.jar" />
+    </item>
+
+</items>
