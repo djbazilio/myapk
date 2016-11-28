@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity
      */
     private GoogleApiClient client;
     private Toolbar toolbar;
-    private ProgressDialog progress;
+    private ProgressBar spinner;
 
     Auth auth = new Auth();
 
@@ -90,6 +91,8 @@ public class MainActivity extends AppCompatActivity
 //            e.printStackTrace();
 //        }
 //
+        spinner = (ProgressBar)findViewById(R.id.progressBar1);
+        spinner.setVisibility(View.GONE);
         View  setting = (View) findViewById(R.id.maine_settings);
         View http = (View) findViewById(R.id.HttpActiviry) ;
         setting.setVisibility(View.GONE);
@@ -206,13 +209,12 @@ public class MainActivity extends AppCompatActivity
         maine.setVisibility(View.GONE);
         System.out.println(item);
     }
-
     public void login(View view) {
         EditText user   = (EditText)findViewById(R.id.user);
         EditText pass   = (EditText)findViewById(R.id.password);
         View main = (View) findViewById(R.id.body) ;
         View login_form = (View) findViewById(R.id.auth) ;
-
+        spinner.setVisibility(View.VISIBLE);
         final boolean login;
         try {
             login = auth.login(user.getText().toString(), pass.getText().toString());
@@ -220,6 +222,7 @@ public class MainActivity extends AppCompatActivity
                 main.setVisibility(View.VISIBLE);
                 login_form.setVisibility(View.GONE);
             }
+            spinner.setVisibility(View.GONE);
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
