@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_auth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:weightSum="1"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.akhonin.bazilio.Auth">
+
+    <Button
+        android:text="Sing in"
+        android:layout_width="171dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:onClick="login"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="188dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:background="@color/common_plus_signin_btn_text_light_disabled"
+        android:id="@+id/password"
+        android:layout_weight="0.05"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/user"
+        android:layout_alignStart="@+id/user"
+        android:layout_marginTop="106dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:inputType="textPersonName"
+        android:text="akhonin"
+        android:textAlignment="center"
+        android:ems="10"
+        android:id="@+id/user"
+        android:selectAllOnFocus="false"
+        android:background="@color/common_plus_signin_btn_text_light_disabled"
+        android:singleLine="false"
+        android:layout_weight="0.07"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp" />
+
+
+</RelativeLayout>

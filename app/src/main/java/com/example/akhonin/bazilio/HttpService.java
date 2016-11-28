@@ -2,109 +2,85 @@ package com.example.akhonin.bazilio;
 
 import android.app.Activity;
 import android.os.AsyncTask;
-import android.support.annotation.Nullable;
+import android.util.Log;
 
-import java.io.BufferedReader;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.ExecutionException;
 
 
 public class HttpService extends Activity {
+        private static final String TAG = MainActivity.class.getSimpleName();
 
+        private String api = "http://192.168.10.6/api/";
+        JSONObject header = new JSONObject();
 
-    private String ApiUrl = "http://192.168.10.6/api";
-    public StringBuilder response;
-
-
-    public void sendGetRequest() {
-            //new GetClass().execute();
-        String p = executePost();
-        System.out.println(p);
-    }
-
-    @Nullable
-    public static String executePost() {
-        HttpURLConnection connection = null;
-
-        try {
-            URL url = new URL("http://192.168.10.6/api/UserTypes");
-            connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("GET");
-            connection.setUseCaches(false);
-            connection.setDoOutput(true);
-            //Get Response
-            InputStream is = connection.getInputStream();
-            BufferedReader rd = new BufferedReader(new InputStreamReader(is));
-            StringBuilder response = new StringBuilder(); // or StringBuffer if Java version 5+
-            String line;
-            while ((line = rd.readLine()) != null) {
-                response.append(line);
-                response.append('\r');
-            }
-            rd.close();
-            return response.toString();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        } finally {
-            if (connection != null) {
-                connection.disconnect();
-            }
+        protected String sendGetRequest(String url) throws ExecutionException, InterruptedException {
+           String test = new DownloadTask().execute(api + url).get();
+            return test;
         }
-    }
 
-    private class GetClass extends AsyncTask<String, Void, Void> {
-        @Override
-        protected Void doInBackground(String... params) {
-            try {
-                URL url = new URL("http://192.168.10.6/api/UserTypes");
+        private class DownloadTask extends AsyncTask<String, Void, String> {
 
-                HttpURLConnection connection = (HttpURLConnection)url.openConnection();
-               // String urlParameters = "fizz=buzz";
-                connection.setRequestMethod("GET");
-               // connection.setRequestProperty("USER-AGENT", "Mozilla/5.0");
-                //connection.setRequestProperty("ACCEPT-LANGUAGE", "en-US,en;0.5");
-                int responseCode = connection.getResponseCode();
-               // System.out.println("\nSending 'GET' request to URL : " + url);
-               // System.out.println("Post parameters : " + urlParameters);
-               // System.out.println("Response Code : " + responseCode);
-
-                final StringBuilder output = new StringBuilder("Request URL " + url);
-                //output.append(System.getProperty("line.separator") + "Request Parameters " + urlParameters);
-              //  output.append(System.getProperty("line.separator")  + "Response Code " + responseCode);
-              //  output.append(System.getProperty("line.separator")  + "Type " + "GET");
-                BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                String line = "";
-                StringBuilder responseOutput = new StringBuilder();
-                while((line = br.readLine()) != null ) {
-                    responseOutput.append(line);
+            @Override
+            protected String doInBackground(String... params) {
+                //do your request in here so that you don't interrupt the UI thread
+                try {
+                    return downloadContent(params[0]);
+                } catch (IOException e) {
+                    System.out.print("================"+String.valueOf(e));
+                    return String.valueOf(401);
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
-                br.close();
-
-                output.append(System.getProperty("line.separator") + "Response " + System.getProperty("line.separator") + System.getProperty("line.separator") + responseOutput.toString());
-
-                HttpService.this.runOnUiThread(new Runnable() {
-
-                    @Override
-                    public void run() {
-                        System.out.println(output);
-                        response = output;
-                    }
-                });
-
-            } catch (MalformedURLException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
+                return null;
             }
-            return null;
         }
 
+        private String downloadContent(String myurl) throws IOException, JSONException {
+            InputStream is = null;
+            int length = 500;
+
+            try {
+                URL url = new URL(myurl);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setReadTimeout(10000 /* milliseconds */);
+                conn.setConnectTimeout(15000 /* milliseconds */);
+                conn.setRequestMethod("GET");
+                if(header.length()!=0) {
+                    System.out.print(header.get("method"));
+                    System.out.print(header.get("hash"));
+                    conn.setRequestProperty(header.get("method").toString(), header.get("hash").toString());
+                }
+                conn.setDoInput(true);
+                conn.connect();
+                int response = conn.getResponseCode();
+                Log.d(TAG, "The response is: " + response);
+                is = conn.getInputStream();
+
+                // Convert the InputStream into a string
+                String contentAsString = convertInputStreamToString(is, length);
+                return contentAsString;
+            } finally {
+                if (is != null) {
+                    is.close();
+                }
+            }
+        }
+
+        public String convertInputStreamToString(InputStream stream, int length) throws IOException, UnsupportedEncodingException {
+            Reader reader = null;
+            reader = new InputStreamReader(stream, "UTF-8");
+            char[] buffer = new char[length];
+            reader.read(buffer);
+            return new String(buffer);
+        }
     }
-}
