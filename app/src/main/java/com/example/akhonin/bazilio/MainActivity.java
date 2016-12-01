@@ -1,6 +1,7 @@
 package com.example.akhonin.bazilio;
 
-import android.app.ProgressDialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -13,7 +14,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import com.google.android.gms.appindexing.Action;
@@ -22,8 +22,9 @@ import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
-import java.util.concurrent.ExecutionException;
+import java.util.Iterator;
 
 
 public class MainActivity extends AppCompatActivity
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity
     private Toolbar toolbar;
     private ProgressBar spinner;
 
-    Auth auth = new Auth();
+   // AuthActivity auth = new AuthActivity();
 
     private boolean viewGroupIsVisible = false;
 
@@ -70,16 +71,13 @@ public class MainActivity extends AppCompatActivity
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
-        View main = (View) findViewById(R.id.body) ;
-        View login_form = (View) findViewById(R.id.auth) ;
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
 
-        if(auth.checkUser()){
-            main.setVisibility(View.GONE);
-            login_form.setVisibility(View.VISIBLE);
-        }else{
-            main.setVisibility(View.VISIBLE);
-            login_form.setVisibility(View.GONE);
-        }
+//        if(auth.checkUser()){
+//            Intent intent = new Intent(MainActivity.this, AuthActivity.class);
+//            startActivity(intent);
+//        }
 
 //        try {
 //            auth.Login("akhonin","Qwerty1010");
@@ -91,8 +89,10 @@ public class MainActivity extends AppCompatActivity
 //            e.printStackTrace();
 //        }
 //
-        spinner = (ProgressBar)findViewById(R.id.progressBar1);
-        spinner.setVisibility(View.GONE);
+//        spinner = (ProgressBar)findViewById(R.id.progressBar1);
+//       spinner.setVisibility(View.GONE);
+
+
         View  setting = (View) findViewById(R.id.maine_settings);
         View http = (View) findViewById(R.id.HttpActiviry) ;
         setting.setVisibility(View.GONE);
@@ -171,16 +171,16 @@ public class MainActivity extends AppCompatActivity
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    public Action getIndexApiAction() {
-        Thing object = new Thing.Builder()
-                .setName("Main Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
-                .build();
-        return new Action.Builder(Action.TYPE_VIEW)
-                .setObject(object)
-                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
-                .build();
-    }
+//    public Action getIndexApiAction() {
+//        Thing object = new Thing.Builder()
+//                .setName("Main Page") // TODO: Define a title for the content shown.
+//                // TODO: Make sure this auto-generated URL is correct.
+//                .build();
+//        return new Action.Builder(Action.TYPE_VIEW)
+//                .setObject(object)
+//                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
+//                .build();
+//    }
 
 //    @Override
 //    public void onStart() {
@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
-        AppIndex.AppIndexApi.end(client, getIndexApiAction());
+        //AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
     }
 
@@ -209,28 +209,51 @@ public class MainActivity extends AppCompatActivity
         maine.setVisibility(View.GONE);
         System.out.println(item);
     }
-    public void login(View view) {
-        EditText user   = (EditText)findViewById(R.id.user);
-        EditText pass   = (EditText)findViewById(R.id.password);
-        View main = (View) findViewById(R.id.body) ;
-        View login_form = (View) findViewById(R.id.auth) ;
-        spinner.setVisibility(View.VISIBLE);
-        final boolean login;
-        try {
-            login = auth.login(user.getText().toString(), pass.getText().toString());
-            if(login){
-                main.setVisibility(View.VISIBLE);
-                login_form.setVisibility(View.GONE);
+
+
+    public void Chat(MenuItem item) throws JSONException {
+        Show();
+        View chat = (View) findViewById(R.id.textView_about_content) ;
+        chat.setVisibility(View.VISIBLE);
+    }
+
+    private void Show() throws JSONException {
+        JSONObject list = new JSONObject();
+        list.put("id", "textView_about_content");
+        list.put("id", "auth");
+        System.out.print(list.get("id"));
+        Iterator<?> keys = list.keys();
+        while( keys.hasNext() ) {
+            String key = (String) keys.next();
+            if (list.get(key) instanceof JSONObject) {
+                System.out.print(list.get(key));
             }
-            spinner.setVisibility(View.GONE);
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
+    }
+
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    public Action getIndexApiAction0() {
+        Thing object = new Thing.Builder()
+                .setName("Main Page") // TODO: Define a title for the content shown.
+                // TODO: Make sure this auto-generated URL is correct.
+                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
+                .build();
+        return new Action.Builder(Action.TYPE_VIEW)
+                .setObject(object)
+                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
+                .build();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        AppIndex.AppIndexApi.start(client, getIndexApiAction0());
     }
 }

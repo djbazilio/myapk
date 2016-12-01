@@ -20,11 +20,11 @@ import java.util.concurrent.ExecutionException;
 public class HttpService extends Activity {
         private static final String TAG = MainActivity.class.getSimpleName();
 
-        //private String api = "http://192.168.10.6/api/";
-        private String api = "http://193.151.246.240/api/";
+        private String api = "http://192.168.10.6/api/";
+        //private String api = "http://193.151.246.240/api/";
         JSONObject header = new JSONObject();
 
-        protected String sendGetRequest(String url) throws ExecutionException, InterruptedException {
+    protected String sendGetRequest(String url) throws ExecutionException, InterruptedException {
            String test = new DownloadTask().execute(api + url).get();
             return test;
         }
